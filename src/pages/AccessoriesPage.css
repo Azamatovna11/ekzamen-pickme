@@ -1,0 +1,134 @@
+.accessories-page {
+  max-width: 1200px;
+  margin: 5rem auto;
+  padding: 0 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  color: #7a44d6;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 8px rgba(160, 115, 255, 0.2);
+}
+
+.page-description {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #555;
+  font-size: 1.1rem;
+}
+
+.accessory-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.accessory-card {
+  background: linear-gradient(135deg, #f3e9ff, #e7d6ff, #d7f5ff);
+  border-radius: 24px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 20px rgba(155, 89, 182, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.accessory-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(155, 89, 182, 0.3);
+}
+
+.accessory-image {
+  width: 100%;
+  height: 180px;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.accessory-placeholder {
+  width: 100%;
+  height: 100%;
+  background: #d7f5ff;
+  border-radius: 16px;
+}
+
+.accessory-title {
+  font-size: 1.2rem;
+  color: #5e2ab2;
+  margin-bottom: 0.5rem;
+}
+
+.accessory-description {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.accessory-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accessory-price {
+  font-weight: 600;
+  color: #7a44d6;
+}
+
+.add-button {
+  background: linear-gradient(90deg, #b388ff, #8e7dff);
+  color: white;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s;
+  box-shadow: 0 0 15px rgba(155, 89, 182, 0.3);
+}
+
+.add-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(155, 89, 182, 0.5);
+}
+
+.help-section {
+  margin-top: 4rem;
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f0e9ff, #e7f0ff);
+  border-radius: 24px;
+  box-shadow: 0 8px 20px rgba(155, 89, 182, 0.15);
+}
+
+.help-title {
+  font-size: 1.8rem;
+  color: #7a44d6;
+  margin-bottom: 0.5rem;
+}
+
+.help-text {
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.contact-button {
+  background: linear-gradient(90deg, #b388ff, #8e7dff);
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s;
+  box-shadow: 0 0 20px rgba(155, 89, 182, 0.3);
+}
+
+.contact-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 35px rgba(155, 89, 182, 0.5);
+}

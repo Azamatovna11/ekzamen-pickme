@@ -1,0 +1,63 @@
+.Card2-1 {
+  position: relative;
+  width: 1440px;
+  max-width: 100%;
+  margin: 3rem auto;
+  padding: 2rem 3rem;
+  background: linear-gradient(135deg, #e0c3fc 0%, #d7b2ff 100%);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.Card2-icon {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.Card2-2-1 {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Card2-main-img {
+  width: 200px;
+  height: auto;
+  border-radius: 16px;
+}
+
+.Card2-button {
+  margin-left: 2rem;
+}
+
+.Card2-button a {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  background-color: #9b59b6;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.Card2-button a:hover {
+  background-color: #8e44ad;
+}
+
+@media (max-width: 1440px) {
+  .Card2-1 {
+    flex-direction: column;
+    padding: 2rem 1.5rem;
+    width: 90%;
+    text-align: center;
+  }
+  .Card2-button {
+    margin: 1.5rem 0 0 0;
+  }
+}

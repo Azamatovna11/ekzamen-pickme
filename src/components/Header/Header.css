@@ -1,0 +1,76 @@
+.header {
+  width: 100%;
+  background: linear-gradient(135deg, #1e1b2e, #2b2142);
+  color: #fff;
+  box-shadow: 0 4px 30px rgba(155, 89, 182, 0.3);
+  border-bottom-left-radius: 32px;
+  border-bottom-right-radius: 32px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-logo img {
+  width: 80px;
+  filter: drop-shadow(0 0 6px rgba(202, 160, 255, 0.6));
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.header-nav a {
+  color: #ccc;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s, transform 0.2s;
+}
+
+.header-nav a:hover {
+  color: #d4b3ff;
+  transform: translateY(-2px);
+}
+
+.create-watch {
+  background: linear-gradient(90deg, #b388ff, #a16eff);
+  color: white !important;
+  padding: 0.5rem 1rem;
+  border-radius: 24px;
+  box-shadow: 0 0 10px rgba(155, 89, 182, 0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.create-watch:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(202, 160, 255, 0.7);
+}
+
+.header-icons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header-icons .icon {
+  color: #caa0ff;
+  font-size: 1.4rem;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.header-icons .icon:hover {
+  color: #fff;
+  transform: scale(1.15);
+}

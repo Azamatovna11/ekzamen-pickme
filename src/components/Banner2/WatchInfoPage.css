@@ -1,0 +1,134 @@
+:root {
+  --main-purple: #7b5fff;
+  --light-purple: #e8e0ff;
+  --main-blue: #cbe7ff;
+  --hover-blue: #99d1ff;
+  --text-dark: #333;
+  --text-light: #555;
+  --background: #f9f9ff;
+}
+
+.watch-info-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: var(--background);
+  border-radius: 20px;
+  font-family: 'Segoe UI', sans-serif;
+  color: var(--text-dark);
+  box-shadow: 0 8px 20px rgba(123, 95, 255, 0.1);
+}
+
+.watch-info-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+}
+
+.watch-image-box {
+  flex: 1;
+  min-width: 380px;
+  text-align: center;
+}
+
+.watch-image {
+  width: 100%;
+  max-width: 380px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(123, 95, 255, 0.15);
+}
+
+.watch-details {
+  flex: 1;
+  min-width: 300px;
+}
+
+.watch-title {
+  font-size: 2rem;
+  color: var(--main-purple);
+  margin-bottom: 0.5rem;
+}
+
+.watch-description {
+  color: var(--text-light);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.watch-specs {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+.watch-specs li {
+  margin-bottom: 0.4rem;
+  background: #fff;
+  padding: 0.5rem 0.8rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(123, 95, 255, 0.08);
+}
+
+.watch-purchase {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--main-purple);
+}
+
+.add-to-cart {
+  padding: 0.7rem 1.4rem;
+  background: linear-gradient(135deg, var(--main-purple), var(--main-blue));
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.add-to-cart:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(123, 95, 255, 0.3);
+}
+
+/* Дополнительная секция */
+.watch-extra-section {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.watch-extra-section h2 {
+  color: var(--main-purple);
+  margin-bottom: 1.5rem;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.benefit-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: 0 6px 20px rgba(123, 95, 255, 0.08);
+  transition: transform 0.2s;
+}
+
+.benefit-card:hover {
+  transform: translateY(-4px);
+}
+
+.benefit-card h3 {
+  color: var(--main-purple);
+  margin-bottom: 0.5rem;
+}

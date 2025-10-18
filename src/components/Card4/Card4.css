@@ -1,0 +1,83 @@
+.Card4 {
+  background: linear-gradient(135deg, #f3e9ff 0%, #e7d6ff 40%, #d7f5ff 100%);
+  color: #333;
+  padding: 6rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 0 40px rgba(155, 89, 182, 0.2);
+  border-radius: 32px;
+  width: 100%;
+}
+
+.Card4-content {
+  max-width: 800px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.Card4 h1 {
+  font-size: 2.4rem;
+  color: #8e44ad;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 0 10px rgba(183, 119, 255, 0.3);
+}
+
+.Card4 p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.Card4-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.btn-main {
+  background: linear-gradient(90deg, #b388ff, #a16eff);
+  border: none;
+  color: white;
+  padding: 0.8rem 1.6rem;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(155, 89, 182, 0.4);
+}
+
+.btn-main:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(155, 89, 182, 0.6);
+}
+
+.btn-second {
+  background: transparent;
+  border: 2px solid #a16eff;
+  color: #a16eff;
+  padding: 0.8rem 1.6rem;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-second:hover {
+  background: rgba(161, 110, 255, 0.1);
+  transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,97 @@
+.signup-container {
+  max-width: 480px;
+  margin: 5rem auto;
+  padding: 3rem 2rem;
+  background: linear-gradient(135deg, #f3e9ff, #e7d6ff, #d7f5ff);
+  border-radius: 32px;
+  box-shadow: 0 0 40px rgba(155, 89, 182, 0.2);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.tabs a {
+  text-decoration: none;
+  color: #555;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.tabs a.active,
+.tabs a:hover {
+  color: #8e44ad;
+}
+
+.headline {
+  font-size: 2rem;
+  color: #7a44d6;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 8px rgba(160, 115, 255, 0.2);
+}
+
+.subheadline {
+  color: #444;
+  margin-bottom: 2rem;
+}
+
+.signup-form input,
+.signup-form select {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border-radius: 25px;
+  border: 1px solid #cbb9ff;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.signup-form input:focus,
+.signup-form select:focus {
+  border-color: #a16eff;
+  box-shadow: 0 0 10px rgba(155, 89, 182, 0.3);
+}
+
+.double {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.checkbox-label {
+  display: block;
+  margin: 1rem 0;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.create-btn {
+  background: linear-gradient(90deg, #b388ff, #8e7dff);
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 20px rgba(155, 89, 182, 0.3);
+}
+
+.create-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 35px rgba(155, 89, 182, 0.5);
+}
+
+.dob {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}

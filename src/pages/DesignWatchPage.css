@@ -1,0 +1,242 @@
+:root {
+  --main-purple: #7b5fff;
+  --light-purple: #e6e0ff;
+  --main-blue: #cbe7ff;
+  --hover-blue: #99d1ff;
+  --text-dark: #333;
+  --text-light: #555;
+  --background: #f9f9ff;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.design-page {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: var(--background);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(123, 95, 255, 0.1);
+}
+
+.page-title {
+  text-align: center;
+  font-size: 2.4rem;
+  color: var(--main-purple);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.page-description {
+  text-align: center;
+  font-size: 1rem;
+  color: var(--text-light);
+  margin-bottom: 2rem;
+}
+
+.content-grid {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.section-title {
+  color: var(--main-purple);
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.option-card {
+  background: #fff;
+  padding: 1.2rem;
+  border-radius: 16px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 6px 20px rgba(123, 95, 255, 0.08);
+  transition: transform 0.2s;
+}
+
+.option-card:hover {
+  transform: translateY(-3px);
+}
+
+.option-heading {
+  margin-bottom: 0.5rem;
+  color: var(--main-purple);
+  font-weight: 600;
+}
+
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.option-button {
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  border: 1px solid var(--light-purple);
+  background: var(--light-purple);
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: 500;
+}
+
+.option-button:hover {
+  background: var(--main-purple);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.option-button.active {
+  background: var(--main-purple);
+  color: #fff;
+  border-color: var(--main-purple);
+}
+
+.color-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.color-circle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid var(--background);
+  cursor: pointer;
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+.color-circle.selected {
+  border-color: var(--main-purple);
+  transform: scale(1.15);
+}
+
+.color-circle:hover {
+  transform: scale(1.1);
+  border-color: var(--main-purple);
+}
+
+.view-all {
+  background: none;
+  border: none;
+  color: var(--main-purple);
+  text-decoration: underline;
+  cursor: pointer;
+  margin-top: 0.3rem;
+  font-weight: 500;
+}
+
+.engraving-input {
+  width: 100%;
+  padding: 0.6rem;
+  border-radius: 12px;
+  border: 1px solid var(--light-purple);
+  outline: none;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+.engraving-input:focus {
+  border-color: var(--main-purple);
+  box-shadow: 0 0 8px rgba(123, 95, 255, 0.3);
+}
+
+.engraving-hint {
+  font-size: 0.8rem;
+  color: var(--text-light);
+  margin-top: 0.2rem;
+}
+
+.preview-box {
+  background: var(--main-blue);
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(123, 95, 255, 0.1);
+}
+
+.preview-watch {
+  width: 160px;
+  height: 160px;
+  background: linear-gradient(135deg, var(--main-purple), var(--main-blue));
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+  box-shadow: 0 6px 15px rgba(123, 95, 255, 0.2);
+  transition: transform 0.3s;
+}
+
+.preview-watch:hover {
+  transform: scale(1.05);
+}
+
+.preview-text {
+  font-weight: 600;
+  color: var(--main-purple);
+  margin-bottom: 0.3rem;
+}
+
+.preview-subtext {
+  font-size: 0.85rem;
+  color: var(--text-light);
+}
+
+.summary-box {
+  background: #fff;
+  padding: 1.2rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(123, 95, 255, 0.08);
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.summary-total {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: 1.15rem;
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--light-purple);
+}
+
+.add-to-cart, .save-design {
+  width: 100%;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s;
+  margin-top: 0.5rem;
+}
+
+.add-to-cart {
+  background: linear-gradient(135deg, var(--main-purple), var(--main-blue));
+  color: #fff;
+}
+
+.add-to-cart:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(123, 95, 255, 0.3);
+}
+
+.save-design {
+  background: var(--light-purple);
+  color: var(--main-purple);
+}
+
+.save-design:hover {
+  background: var(--main-purple);
+  color: #fff;
+  transform: translateY(-2px);
+}
