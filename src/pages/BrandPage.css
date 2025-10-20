@@ -1,71 +1,57 @@
 .brand-page {
-  max-width: 1200px;
-  margin: 5rem auto;
-  padding: 0 2rem;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #333;
-}
-
-.brand-title {
-  text-align: center;
-  font-size: 2.5rem;
-  color: #7a44d6;
-  margin-bottom: 2rem;
-  text-shadow: 0 0 8px rgba(160, 115, 255, 0.2);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
 }
 
 .hero-section {
   position: relative;
-  height: 300px;
+  background: linear-gradient(135deg, #b388ff, #8e7dff);
+  height: 400px;
   border-radius: 24px;
-  overflow: hidden;
   margin-bottom: 3rem;
-  background: linear-gradient(135deg, #f3e9ff, #e7d6ff, #d7f5ff);
-  box-shadow: 0 8px 20px rgba(155, 89, 182, 0.2);
+  overflow: hidden;
 }
 
 .hero-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(155, 89, 182, 0.1);
+  background: rgba(0,0,0,0.2);
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
 }
 
 .hero-text h2 {
-  font-size: 2rem;
-  color: #5e2ab2;
-  text-align: center;
+  font-size: 1.8rem;
+  color: #e0d4ff;
   margin-bottom: 0.5rem;
-  text-shadow: 0 0 10px rgba(160, 115, 255, 0.3);
 }
 
 .hero-text p {
-  text-align: center;
-  color: #555;
-  font-size: 1rem;
+  font-size: 1.1rem;
+  color: #ddd;
 }
 
 .brand-section {
-  margin-bottom: 3rem;
-}
-
-.brand-section h2 {
-  font-size: 2rem;
-  color: #7a44d6;
-  margin-bottom: 1.5rem;
-  text-align: center;
+  margin-bottom: 4rem;
 }
 
 .brand-flex {
   display: flex;
   gap: 2rem;
   align-items: center;
-  flex-wrap: wrap;
+  margin-top: 1rem;
 }
 
 .brand-flex.reverse {
@@ -73,24 +59,27 @@
 }
 
 .brand-image {
-  flex: 1;
-  min-height: 200px;
-  background: linear-gradient(135deg, #e7f0ff, #f3e9ff);
-  border-radius: 24px;
-  box-shadow: 0 8px 20px rgba(155, 89, 182, 0.15);
+  width: 50%;
+  border-radius: 16px;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.brand-image:hover {
+  transform: scale(1.05);
 }
 
 .brand-description {
-  flex: 1;
-  font-size: 1rem;
+  width: 50%;
   color: #555;
+  line-height: 1.6;
 }
 
 .innovation-box {
-  background: linear-gradient(135deg, #f3e9ff, #e7f0ff, #e7d6ff);
+  background: linear-gradient(135deg, #f0e9ff, #e7f0ff);
   padding: 2rem;
   border-radius: 24px;
-  box-shadow: 0 8px 20px rgba(155, 89, 182, 0.2);
+  box-shadow: 0 8px 20px rgba(155, 89, 182, 0.15);
 }
 
 .features-grid {
@@ -101,43 +90,33 @@
 }
 
 .feature-card {
-  background: linear-gradient(135deg, #e7d6ff, #f3e9ff);
-  padding: 1rem;
-  border-radius: 20px;
+  background: linear-gradient(135deg, #b388ff, #8e7dff);
+  color: #fff;
+  padding: 1.5rem;
+  border-radius: 16px;
   text-align: center;
-  box-shadow: 0 6px 15px rgba(155, 89, 182, 0.15);
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .feature-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(155, 89, 182, 0.3);
-}
-
-.feature-card h3 {
-  color: #5e2ab2;
-  margin-bottom: 0.5rem;
-}
-
-.feature-card p {
-  color: #555;
-  font-size: 0.95rem;
+  box-shadow: 0 12px 30px rgba(155, 89, 182, 0.4);
 }
 
 .explore-container {
-  text-align: center;
   margin-top: 2rem;
+  text-align: center;
 }
 
 .explore-btn {
   background: linear-gradient(90deg, #b388ff, #8e7dff);
-  color: white;
-  border: none;
+  color: #fff;
   padding: 0.8rem 2rem;
   border-radius: 25px;
+  border: none;
+  font-weight: 600;
   cursor: pointer;
-  font-weight: 500;
-  transition: all 0.3s ease;
+  transition: all 0.3s;
   box-shadow: 0 0 20px rgba(155, 89, 182, 0.3);
 }
 

@@ -9,32 +9,34 @@ const CartPage = ({ setCurrentPage }) => {
     { id: 4, name: 'Услуга гравировки', description: 'Пользовательские инициалы', price: 549, quantity: 1 }
   ]);
 
-  const increaseQuantity = (id) => {
-    setCartItems(prev => prev.map(item => item.id === id ? { ...item, quantity: item.quantity + 1 } : item));
-  };
+  const formatPrice = num => num.toLocaleString('ru-RU');
 
-  const decreaseQuantity = (id) => {
-    setCartItems(prev => prev.map(item => item.id === id && item.quantity > 1 ? { ...item, quantity: item.quantity - 1 } : item));
+  const changeQuantity = (id, delta) => {
+    setCartItems(prev =>
+      prev.map(item =>
+        item.id === id
+          ? { ...item, quantity: Math.max(1, item.quantity + delta) }
+          : item
+      )
+    );
   };
 
   const removeItem = (id) => {
-    setCartItems(prev => prev.filter(item => item.id !== id));
+    if (window.confirm('Удалить этот товар из корзины?')) {
+      setCartItems(prev => prev.filter(item => item.id !== id));
+    }
   };
 
-  const handleContinueShopping = () => {
-    if (setCurrentPage) setCurrentPage('watches');
-  };
+  const handleContinueShopping = () => setCurrentPage?.('watches');
 
-  const handleProceedToCheckout = () => {
-    alert('Переход к оформлению заказа!');
-  };
+  const handleProceedToCheckout = () => alert('Переход к оформлению заказа!');
 
   const handleApplyDiscount = () => {
     const code = prompt('Введите ваш скидочный код:');
     if (code) alert(`Скидочный код "${code}" применен!`);
   };
 
-  const subtotal = cartItems.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+  const subtotal = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0);
   const shipping = 329;
   const tax = Math.round(subtotal * 0.08);
   const total = subtotal + shipping + tax;
@@ -42,12 +44,13 @@ const CartPage = ({ setCurrentPage }) => {
   return (
     <div className="cart-container">
       <h1 className="cart-title">Ваша корзина</h1>
-
       <div className="cart-layout">
         <div className="cart-items">
           <div className="cart-header">
             <h2>Товары ({cartItems.length})</h2>
-            <button className="link-button" onClick={handleContinueShopping}>Продолжить покупки</button>
+            <button className="link-button" onClick={handleContinueShopping}>
+              Продолжить покупки
+            </button>
           </div>
 
           {cartItems.map(item => (
@@ -56,12 +59,12 @@ const CartPage = ({ setCurrentPage }) => {
               <div className="item-info">
                 <h3>{item.name}</h3>
                 <p>{item.description}</p>
-                <span>{item.price.toLocaleString('ru-RU')} сом</span>
+                <span>{formatPrice(item.price)} сом</span>
               </div>
               <div className="quantity-controls">
-                <button onClick={() => decreaseQuantity(item.id)}>-</button>
+                <button onClick={() => changeQuantity(item.id, -1)}>-</button>
                 <span>{item.quantity}</span>
-                <button onClick={() => increaseQuantity(item.id)}>+</button>
+                <button onClick={() => changeQuantity(item.id, +1)}>+</button>
               </div>
               <button className="remove-button" onClick={() => removeItem(item.id)}>✕</button>
             </div>
@@ -70,37 +73,19 @@ const CartPage = ({ setCurrentPage }) => {
 
         <div className="cart-summary">
           <h2>Сводка заказа</h2>
-          <div className="summary-row">
-            <span>Подытог</span>
-            <span>{subtotal.toLocaleString('ru-RU')} сом</span>
-          </div>
-          <div className="summary-row">
-            <span>Доставка</span>
-            <span>{shipping.toLocaleString('ru-RU')} сом</span>
-          </div>
-          <div className="summary-row">
-            <span>Налог</span>
-            <span>{tax.toLocaleString('ru-RU')} сом</span>
-          </div>
-          <div className="summary-total">
-            <span>Итого</span>
-            <strong>{total.toLocaleString('ru-RU')} сом</strong>
-          </div>
+          <div className="summary-row"><span>Подытог</span><span>{formatPrice(subtotal)} сом</span></div>
+          <div className="summary-row"><span>Доставка</span><span>{formatPrice(shipping)} сом</span></div>
+          <div className="summary-row"><span>Налог</span><span>{formatPrice(tax)} сом</span></div>
+          <div className="summary-total"><span>Итого</span><strong>{formatPrice(total)} сом</strong></div>
 
-          <button className="checkout-button" onClick={handleProceedToCheckout}>
-            Перейти к оформлению заказа
-          </button>
-
+          <button className="checkout-button" onClick={handleProceedToCheckout}>Перейти к оформлению заказа</button>
           <div className="divider"><span>ИЛИ</span></div>
-
-          <button className="discount-button" onClick={handleApplyDiscount}>
-            Применить скидочный код
-          </button>
+          <button className="discount-button" onClick={handleApplyDiscount}>Применить скидочный код</button>
 
           <div className="free-shipping">
             <h3>Бесплатная доставка</h3>
             <p>
-              Добавьте ещё {(5500 - subtotal > 0 ? (5500 - subtotal).toLocaleString('ru-RU') : 0)} сом, 
+              Добавьте ещё {(5500 - subtotal > 0 ? formatPrice(5500 - subtotal) : 0)} сом,
               чтобы получить бесплатную доставку.
             </p>
           </div>

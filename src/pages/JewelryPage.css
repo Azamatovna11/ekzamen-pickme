@@ -1,78 +1,66 @@
-
-:root {
-  --main-purple: #7b5fff;
-  --light-purple: #e6e0ff;
-  --main-blue: #cbe7ff;
-  --hover-blue: #99d1ff;
-  --text-dark: #333;
-  --text-light: #555;
-  --background: #f9f9ff;
-}
-
 .jewelry-container {
   max-width: 1200px;
-  margin: 2rem auto;
-  padding: 2rem;
-  background: var(--background);
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(123, 95, 255, 0.1);
+  margin: 3rem auto;
+  padding: 0 2rem;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
 }
 
-.jewelry-title {
+.jewelry-container h1 {
   text-align: center;
-  font-size: 2.4rem;
-  color: var(--main-purple);
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-}
-
-.jewelry-subtitle {
-  text-align: center;
-  font-size: 1rem;
-  color: var(--text-light);
-  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  color: #7a44d6;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 10px rgba(160, 115, 255, 0.2);
 }
 
 .jewelry-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
+  margin-top: 2rem;
 }
 
 .jewelry-card {
-  background: #fff;
-  border-radius: 16px;
-  box-shadow: 0 6px 20px rgba(123, 95, 255, 0.08);
+  background: linear-gradient(135deg, #f3e9ff, #d7f5ff);
+  border-radius: 20px;
   overflow: hidden;
+  box-shadow: 0 8px 20px rgba(155, 89, 182, 0.2);
   transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
 }
 
 .jewelry-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 30px rgba(123, 95, 255, 0.15);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(155, 89, 182, 0.35);
 }
 
-.jewelry-image-placeholder {
+.jewelry-image {
   width: 100%;
-  height: 180px;
-  background: linear-gradient(135deg, var(--main-purple), var(--main-blue));
+  height: 220px;
+  object-fit: cover;
+  border-bottom: 1px solid #e0dfff;
 }
 
 .jewelry-card-content {
-  padding: 1rem;
+  padding: 1rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .jewelry-card-content h2 {
-  font-size: 1.2rem;
-  color: var(--main-purple);
-  margin-bottom: 0.3rem;
+  font-size: 1.25rem;
+  color: #5e2ab2;
+  margin-bottom: 0.5rem;
 }
 
 .jewelry-card-content p {
-  font-size: 0.9rem;
-  color: var(--text-light);
+  font-size: 0.95rem;
+  color: #555;
   margin-bottom: 0.8rem;
+  flex-grow: 1;
 }
 
 .jewelry-card-footer {
@@ -83,58 +71,59 @@
 
 .jewelry-card-footer span {
   font-weight: 600;
-  color: var(--text-dark);
+  color: #7a44d6;
 }
 
 .details-button {
-  padding: 0.4rem 0.8rem;
+  background: linear-gradient(90deg, #b388ff, #8e7dff);
+  color: white;
   border: none;
-  border-radius: 12px;
-  background: linear-gradient(135deg, var(--main-purple), var(--main-blue));
-  color: #fff;
+  padding: 0.5rem 1.2rem;
+  border-radius: 25px;
   cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.2s;
   font-weight: 500;
+  transition: all 0.3s;
+  box-shadow: 0 0 12px rgba(155, 89, 182, 0.3);
 }
 
 .details-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 15px rgba(123, 95, 255, 0.3);
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(155, 89, 182, 0.5);
 }
 
 .custom-design-section {
-  margin-top: 3rem;
-  background: var(--light-purple);
-  padding: 2rem;
-  border-radius: 16px;
+  margin-top: 4rem;
   text-align: center;
-  box-shadow: 0 6px 20px rgba(123, 95, 255, 0.08);
+  padding: 2rem;
+  background: linear-gradient(135deg, #f0e9ff, #e7f0ff);
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(155, 89, 182, 0.15);
 }
 
 .custom-design-section h2 {
-  color: var(--main-purple);
+  font-size: 1.8rem;
+  color: #7a44d6;
   margin-bottom: 0.5rem;
-  font-size: 1.6rem;
-  font-weight: 600;
 }
 
 .custom-design-section p {
-  color: var(--text-dark);
-  margin-bottom: 1.2rem;
+  color: #555;
+  margin-bottom: 1.5rem;
 }
 
 .consult-button {
-  padding: 0.7rem 1.5rem;
+  background: linear-gradient(90deg, #b388ff, #8e7dff);
+  color: white;
   border: none;
-  border-radius: 14px;
-  background: linear-gradient(135deg, var(--main-purple), var(--main-blue));
-  color: #fff;
-  font-weight: 600;
+  padding: 0.8rem 2rem;
+  border-radius: 25px;
   cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.2s;
+  font-weight: 500;
+  transition: all 0.3s;
+  box-shadow: 0 0 20px rgba(155, 89, 182, 0.3);
 }
 
 .consult-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 15px rgba(123, 95, 255, 0.3);
+  transform: scale(1.05);
+  box-shadow: 0 0 35px rgba(155, 89, 182, 0.5);
 }

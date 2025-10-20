@@ -1,13 +1,14 @@
-import {RouterProvider} from 'react-router-dom'
+import { RouterProvider } from 'react-router-dom'
 import './App.css'
 import myRouter from './router'
+
 function App() {
+  
 
   return (
-    <>
-    <RouterProvider router={myRouter}/>
-  
-    </>
+    <div className='wrapper'>
+      <RouterProvider router={myRouter} />
+    </div>
   )
 }
 

@@ -15,21 +15,25 @@ const AccessoriesPage = () => {
       name: 'Ремешки из кожи',
       description: 'Ремешки из кожи ручной работы в различных цветах и текстурах, чтобы соответствовать вашему стилю.',
       price: '989 сом',
+      image: 'https://i.pinimg.com/736x/f4/d5/1d/f4d51dd97f4408fd94aa82b8815d02fb.jpg'
     },
     {
       name: 'Металлические браслеты',
       description: 'Элегантные металлические браслеты с механизмами быстрого снятия для легкой замены.',
       price: '1 429 сом',
+      image: 'https://i.pinimg.com/1200x/f9/f5/aa/f9f5aa2d81a634e73bbe453d6813ed9e.jpg'
     },
     {
       name: 'Чехлы для часов',
       description: 'Защитные чехлы, разработанные специально для часов VOLUMENZEIT, чтобы сохранить их в безопасности.',
       price: '439 сом',
+      image: 'https://i.pinimg.com/1200x/6c/50/3f/6c503f9dc586b3b451f8ccf249b6cc04.jpg'
     },
     {
       name: 'Комплект для очистки',
       description: 'Средства и инструменты для поддержания безупречного внешнего вида ваших часов.',
       price: '279 сом',
+      image: 'https://i.pinimg.com/736x/4e/a1/2f/4ea12f1a3ae9cd6422f7ccde0ca93f91.jpg'
     },
   ];
 
@@ -44,7 +48,7 @@ const AccessoriesPage = () => {
         {accessories.map((item) => (
           <div key={item.name} className="accessory-card">
             <div className="accessory-image">
-              <div className="accessory-placeholder" />
+              <img src={item.image} alt={item.name} />
             </div>
             <div className="accessory-info">
               <h2 className="accessory-title">{item.name}</h2>

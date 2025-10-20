@@ -28,7 +28,7 @@ function Footer() {
           <p>Телефон: +996 (770) 30 84 84</p>
           <p>Email: azamatkyzy@gmail.com</p>
           <div className="footer-socials">
-            <a href="" target="" rel=""><FaInstagram /></a>
+            <a href="https://www.instagram.com/kanibek0va_/" target="" rel=""><FaInstagram /></a>
             <a href="https://facebook.com" target="" rel=""><FaFacebook /></a>
             <a href="https://pinterest.com" target="" rel=""><FaPinterest /></a>
             <a href="https://twitter.com" target="_blnk" rel=""><FaTwitter /></a>

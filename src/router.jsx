@@ -11,6 +11,7 @@ import WatchesPage from "./pages/WatchesPage"
 import CartPage from "./pages/CartPage"
 import CreateAccount from "./pages/CreateAccount"
 import ProfilePage from "./pages/ProfilePage"
+// import ProductDetail from "./pages/ProductDetail"
 
 const myRouter = createBrowserRouter([
     {
@@ -60,7 +61,7 @@ const myRouter = createBrowserRouter([
             {
                 path: "ProfilePage",
                 element: <ProfilePage/>
-            }
+            },
         ]
     }
 ])

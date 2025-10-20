@@ -18,7 +18,7 @@ function Header() {
           <Link to="JewelryPage">Украшения</Link>
           <Link to="BrandPage">Бренды</Link>
           <Link to="WatchesPage">Часы</Link>
-          <Link className='create-watch' to="DesignWatchPage">Создать свои часы</Link>
+          <Link className='create-watch' to="/DesingWatchPage">Создать свои часы</Link>
         </nav>
 
         <div className='header-icons'>

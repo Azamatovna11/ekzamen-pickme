@@ -2,10 +2,12 @@ import React from 'react'
 // import Card from '../components/Card/Card'
 import Card2 from '../components/Card2/Card2'
 import Card3 from "../components/Card3/Card"
-import Banner from '../components/Banner/Banner'
+// import Banner from '../components/Banner/Banner'
+import MainPage from '../components/MainPage/MainPage'
 import Card4 from '../components/Card4/Card4'
 import Card5 from "../components/Card5/Card5"
-import Banner2 from "../components/Banner2/WatchInfoPage"
+// import Banner2 from "../components/Banner2/WatchInfoPage"
+
 
 function Home() {
   return (
@@ -13,10 +15,12 @@ function Home() {
       {/* <Card/> */}
       <Card2/>
       <Card3/>
-      <Banner/>
+      {/* <Banner/> */}
+      <MainPage/>
       <Card4/>
       <Card5/>
-      <Banner2/>
+      {/* <Banner2/> */}
+      
     </div>
   )
 }
